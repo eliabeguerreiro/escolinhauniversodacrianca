@@ -42,7 +42,6 @@ if($btnCadUsuario){
 	if(!$erro){
 		//var_dump($dados);
 		$dados['senha'] = password_hash($dados['senha'], PASSWORD_DEFAULT);
-		echo $dados['senha'];
 		$result_usuario = "INSERT INTO usuarios (nome, matricula, senha, nivel) VALUES ('" .$dados['nome']. "','" .$dados['matricula']. "','" .$dados['senha']. "','$nivel')";
 		$resultado_usario = mysqli_query($conn, $result_usuario);
 		if(mysqli_insert_id($conn)){
