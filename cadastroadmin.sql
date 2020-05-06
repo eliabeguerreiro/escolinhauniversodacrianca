@@ -1,1 +1,1 @@
-select * from usuarios
+insert into `usuarios`(`id`,`nome`,`matricula`,`senha`,`nivel`) values (1, 'Teste1', 'email@teste1.com', 'Teste1', '$2y$10$kbDmKrZZFLnW8JbmiYrVEOqzwEFzIxC1gWlzzepKiBreGk23xJ.8e', 'Admin');
