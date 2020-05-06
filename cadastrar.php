@@ -1,7 +1,7 @@
 <?php
 session_start();
 ob_start();
-$nivel = "Membro";
+$nivel = "Aluno";
 $btnCadUsuario = filter_input(INPUT_POST, 'btnCadUsuario', FILTER_SANITIZE_STRING);
 if($btnCadUsuario){
 	include_once 'conexao.php';
@@ -46,7 +46,7 @@ if($btnCadUsuario){
 		$resultado_usario = mysqli_query($conn, $result_usuario);
 		if(mysqli_insert_id($conn)){
 			$_SESSION['msgcad'] = "Usuário cadastrado com sucesso";
-			header("Location: index.php");
+			//header("Location: index.php");
 		}else{
 			$_SESSION['msg'] = "Erro ao cadastrar o usuário";
 		}
