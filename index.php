@@ -31,8 +31,8 @@ session_start();
 			<br>
 			<input type="submit" name="btnLogin" value="Acessar">
 			
-			<h4>Ainda não possui uma conta?</h4>
-			<a href="cadastrar.php">Crie grátis</a>
+			<h4>Mudar senha?</h4>
+			<a href="mudarsenha.php">aqui</a>
 		
 		</form>
 		<br></center>
