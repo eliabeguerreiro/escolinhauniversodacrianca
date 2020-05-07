@@ -32,7 +32,7 @@ session_start();
 			<input type="submit" name="btnLogin" value="Acessar">
 			
 			<h4>Mudar senha?</h4>
-			<a href="mudarsenha.php">aqui</a>
+			<a href="src/mudarsenha.php">aqui</a>
 		
 		</form>
 		<br></center>
