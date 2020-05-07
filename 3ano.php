@@ -1,7 +1,6 @@
 <?php
 session_start();
 $matricula[] = str_split($_SESSION['matricula']);
-var_dump($matricula);
 if($_SESSION['matricula'] == 0000){
 }
 elseif($matricula[0]!=0 || $matricula[1]!=3){
