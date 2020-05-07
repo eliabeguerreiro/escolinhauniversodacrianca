@@ -5,8 +5,8 @@ if(isset($_SESSION['msg'])){
     echo $_SESSION['msg'];
     unset($_SESSION['msg']);
 }
-$btnLogin = filter_input(INPUT_POST, 'btnMudarsenha', FILTER_SANITIZE_STRING);
-if($btnLogin){
+$btnMudar = filter_input(INPUT_POST, 'btnMudarsenha', FILTER_SANITIZE_STRING);
+if($btnMudar){
     $matricula = filter_input(INPUT_POST, 'matricula', FILTER_SANITIZE_STRING);
 	$senha_nova = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
     $confirme_senha = filter_input(INPUT_POST, 'confirma_senha', FILTER_SANITIZE_STRING);

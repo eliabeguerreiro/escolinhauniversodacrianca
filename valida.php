@@ -17,7 +17,7 @@ if($btnLogin){
 			if(password_verify($senha, $row_usuario['senha'])){
 				$_SESSION['id'] = $row_usuario['id'];
 				$_SESSION['nome'] = $row_usuario['nome'];
-				$_SESSION['email'] = $row_usuario['matricula'];
+				$_SESSION['matricula'] = $row_usuario['matricula'];
 				header("Location: painel.php");
 			}else{
 				$_SESSION['msg'] = "Login e senha incorreto!";
