@@ -6,9 +6,13 @@ if(isset($_SESSION['msg'])){
 	unset($_SESSION['msg']);
 };
 if(!empty($_SESSION['id'])){
-	echo "Olá ".$_SESSION['nome'].", Bem vindo <br>";
+	echo $_SESSION['acesso'].' '.$_SESSION['nome'].", Bem vindo!<br>";
 	echo "<a href='sair.php'>Sair</a></br>";
+}else{
+	$_SESSION['msg'] = "Login expirou!";
+	header("Location: ../index.php");
 };
+
 $matricula[] = str_split($_SESSION['matricula']);
 
 
