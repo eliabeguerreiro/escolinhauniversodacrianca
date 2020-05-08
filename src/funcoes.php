@@ -1,6 +1,7 @@
 <?php
+ob_start();
 function video ($sala, $pagina){
-    include("conexao.php");
+    include_once("conexao.php");
 
     $cmd = "SELECT * FROM videos"; 
     $result = mysqli_query($conn, $cmd);
@@ -39,3 +40,4 @@ function video ($sala, $pagina){
     };
     return($numPaginas);
 }
+ob_end_flush();
