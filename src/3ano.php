@@ -23,13 +23,9 @@ echo '</br></br></br>';
 	<head>
 		<meta charset="utf-8"/>
 		<title>3° Ano</title> 
-		<link rel="stylesheet" href="css.css">
-		<link rel="stylesheet" href="style-slas.css">
+		<link rel="stylesheet" href="style-salas.css">
 	</head>
 		<body>
-			<input type="checkbox" name="check">
-			<label id="icone" for="check"><img src="img/icone.png" alt=""></label>
-
 			<div class="barra">  
 				<nav>
 					<?php
@@ -38,11 +34,11 @@ echo '</br></br></br>';
 							echo '<div class = "link">';
 							echo$i;
 							echo"</div></a>"; 
-					};
+						};?>
 
 
 
-?>
+
 				</nav>
 			</div>
 
