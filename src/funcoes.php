@@ -14,7 +14,7 @@ function video ($sala, $pagina){
     $produto = mysqli_query($conn, $cmd);
     while ($row = mysqli_fetch_array($produto)){
         if($row['sala']!=$sala){	
-        }else{?><div id="ytplayer">
+        }else{?><div class="container" id="ytplayer">
             <script>
             // Load the IFrame Player API code asynchronously.
             var tag = document.createElement('script');
@@ -27,8 +27,8 @@ function video ($sala, $pagina){
             var player;
             function onYouTubePlayerAPIReady() {
                 player = new YT.Player('ytplayer', {
-                height: '360',
-                width: '640',
+                height: 'auto',
+                width: 'auto',
                 videoId: '<?php echo$row['link'];?>'
                 });
             }
