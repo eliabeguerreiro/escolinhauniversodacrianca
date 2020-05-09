@@ -14,7 +14,7 @@ function video ($sala, $pagina){
     $produto = mysqli_query($conn, $cmd);
     while ($row = mysqli_fetch_array($produto)){
         if($row['sala']!=$sala){	
-        }else{?><div class="container" id="ytplayer">
+        }else{?><div id="ytplayer">
             <script>
             // Load the IFrame Player API code asynchronously.
             var tag = document.createElement('script');

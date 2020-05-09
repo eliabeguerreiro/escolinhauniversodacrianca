@@ -23,6 +23,14 @@ if($_SESSION['acesso'] == 'Admin'){
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	</head>
 		<body>
+			<div>
+			<nav class="navegacao">
+
+				<?php echo'<p>Você está na pagina do terceiro ano</p>';
+				echo'<a href="painel.php">voltar</a></br>';?>
+
+			</nav>
+			</div>
 			<?php 
 			$pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
 			$numPaginas = video($sala = '3ano', $pagina);
