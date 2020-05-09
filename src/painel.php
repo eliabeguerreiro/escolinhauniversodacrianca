@@ -20,4 +20,4 @@ echo '<a href="1ano.php">1°Ano</a></br>';
 echo '<a href="2ano.php">2°Ano</a></br>';
 echo '<a href="3ano.php">3°Ano</a></br>';
 echo '<a href="4ano.php">4°Ano</a></br>';
-echo '<a href="4ano.php">5°Ano</a></br>';
+echo '<a href="5ano.php">5°Ano</a></br>';
