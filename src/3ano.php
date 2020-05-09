@@ -1,5 +1,6 @@
 <?php
 session_start();
+$sala  = '3ano';
 include("funcoes.php");
 if(!empty($_SESSION['id'])){
     if($_SESSION['acesso'] == 'Administrador'){}}
@@ -26,19 +27,18 @@ if(!empty($_SESSION['id'])){
         <div class="right-content">
             <?php 
 			$pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
-			$numPaginas = video($sala = '3ano', $pagina);
-			echo '</br></br></br>';?>
+			$numPaginas = video($sala, $pagina);?>
         </div>
         <div class="left-content">
             <div class="barra">  
 				<nav>
 					<?php
 						for($i = 1; $i < $numPaginas + 1; $i++) {
-							echo "<a href='3ano.php?pagina=$i'>";
+							echo "<a href='".$sala.".php?pagina=$i'>";
 							echo '<div class = "link">';
 							echo$i;
 							echo"</div></a>"; 
-						};?>
+						};?>S
 				</nav>
 			</div>
 

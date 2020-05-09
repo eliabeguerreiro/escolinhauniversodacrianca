@@ -1,53 +1,49 @@
 <?php
 session_start();
+$sala  = '1ano';
+include("funcoes.php");
 if(!empty($_SESSION['id'])){
-	echo $_SESSION['acesso'].' '.$_SESSION['nome']."<br>";
-	echo "<a href='sair.php'>Sair</a></br>";
-}else{
-	$_SESSION['msg'] = "Login expirou!";
-	header("Location: ../index.php");
-};
-if($_SESSION['acesso'] == 'admin'){
-}elseif($matricula[0]!=0 || $matricula[1]!=1){
-    $_SESSION['msg']='Você não pertence a esta série!</br>';
-    header("Location: painel.php");
-};
-echo'<p>Você está na pagina do primeiro ano</p>';
-echo '<a href="painel.php">voltar</a></br>';
+    if($_SESSION['acesso'] == 'Administrador'){}}
+    elseif($matricula[0]!=0 || $matricula[1]!=1){
+        $_SESSION['msg']='Você não pertence a esta série!</br>';
+        header("Location: painel.php");
+    };
 ?>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+		<title>1° Ano</title> 
+		<link rel="stylesheet" href="style-salas.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <div class="upper-content">
+            <nav>
+                <h3 id='sala'>Sala do 1° ano</h3>
+                <h3 id='nome'><?php echo $_SESSION['nome']."<br>";?></h3> 
+                <a href="painel.php" id='voltar'><img src="img/voltar.png"></img></a>               
+            </nav>
+        </div>
+        <div class="right-content">
+            <?php 
+			$pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
+			$numPaginas = video($sala, $pagina);
+			echo '</br></br></br>';?>
+        </div>
+        <div class="left-content">
+            <div class="barra">  
+				<nav>
+					<?php
+						for($i = 1; $i < $numPaginas + 1; $i++) {
+							echo "<a href='".$sala.".php?pagina=$i'>";
+							echo '<div class = "link">';
+							echo$i;
+							echo"</div></a>"; 
+						};?>S
+				</nav>
+			</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="ytplayer">
-<script>
-  // Load the IFrame Player API code asynchronously.
-  var tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/player_api";
-  var firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  // Replace the 'ytplayer' element with an <iframe> and
-  // YouTube player after the API code downloads.
-  var player;
-  function onYouTubePlayerAPIReady() {
-    player = new YT.Player('ytplayer', {
-      height: '360',
-      width: '640',
-      videoId: '05NSeYOjWOs'
-    });
-  }
-</script>
-</div>
+        </div>
+        
+    </body>
+</html>
