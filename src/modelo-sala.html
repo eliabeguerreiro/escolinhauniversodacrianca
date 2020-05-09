@@ -18,17 +18,15 @@ if(!empty($_SESSION['id'])){
     <body>
         <div class="upper-content">
             <nav>
-                <h3 id='sala'>Sala do 3° ano</h3>
-                <h3 id='nome'><?php echo $_SESSION['nome']."<br>";?></h3> 
-                <a href="painel.php" id='voltar'><img src="img/voltar.png"></img></a>               
+                <h3 id='sala'>Sala do 3°ano</h3>
+                <h3 id='nome'><?php echo $_SESSION['acesso'].' '.$_SESSION['nome']."<br>";?></h3> 
+                <a href="painel.php" id='voltar'><img src="voltar.png"></img></a>               
             </nav>
         </div>
-        <div class="right-content">
-            <?php 
-			$pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
-			$numPaginas = video($sala = '3ano', $pagina);
-			echo '</br></br></br>';?>
+        <div class="rigth-content">
+                
         </div>
+
         <div class="left-content">
             <div class="barra">  
 				<nav>
@@ -43,6 +41,5 @@ if(!empty($_SESSION['id'])){
 			</div>
 
         </div>
-        
     </body>
 </html>
