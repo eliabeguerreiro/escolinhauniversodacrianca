@@ -2,7 +2,7 @@
 session_start();
 include("funcoes.php");
 if(!empty($_SESSION['id'])){
-    if($_SESSION['acesso'] == 'Admin'){}}
+    if($_SESSION['acesso'] == 'Administrador'){}}
     elseif($matricula[0]!=0 || $matricula[1]!=1){
         $_SESSION['msg']='Você não pertence a esta série!</br>';
         header("Location: painel.php");
