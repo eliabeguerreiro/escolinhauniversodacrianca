@@ -2,18 +2,16 @@
 ob_start();
 function video ($sala, $pagina){
     include_once("conexao.php");
-
-    $cmd = "SELECT * FROM videos"; 
+    $cmd = "SELECT * FROM videos WHERE sala = '$sala'"; 
+    echo $cmd;
     $result = mysqli_query($conn, $cmd);
     $total = mysqli_num_rows($result);
     $registros = 1;
-    $numPaginas = ceil($total/$registros); 
-    $inicio = ($registros*$pagina)-$registros; 
-    $cmd = "SELECT * FROM posts LIMIT $inicio,$registros"; 
-    $cmd = "SELECT * FROM videos WHERE numero=$pagina LIMIT 1";
+    $numPaginas = ceil($total/$registros);  
     $produto = mysqli_query($conn, $cmd);
+    var_dump($produto);
     while ($row = mysqli_fetch_array($produto)){
-        if($row['sala']!=$sala){	
+        if($row['numero']!=$pagina){	
         }else{?><div id="ytplayer">
             <script>
             // Load the IFrame Player API code asynchronously.
@@ -35,7 +33,6 @@ function video ($sala, $pagina){
             </script>
             </div>
     <?php 
-
     };
     };
     return($numPaginas);
